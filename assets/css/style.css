@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022330;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+body {
+
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-heading);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+.person{
+
+margin-bottom: 20px;
+
+
+
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+
+}
+
+.iconbox {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3, 63, 71, 1), rgba(3, 63, 71, 0.7)), url(../images/back2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar-brand img {
+
+        border: 8px solid var(--color-brand)
+    }
+
+    /* CONTENT-WRAPER */
+    #content-wraper {
+        padding-left: var(--sidbar-width);
+    }
+
+    /* //CONTENT-WRAPER */
+}
+
+/* BTN */
+.btn {
+    padding: 12px 28 px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* //BTN */
+
+.footer {
+    background-color: var(--color-base);
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer-list-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.footer-links {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-menu {
+    padding: 0 5rem;
+}
+
+.footer-menu .footer-menu-list {
+    display: flex;
+    list-style: none;
+}
+
+/* CARD */
+
+.card-custom .card-custom-image {
+
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    height: 300px;
+    width: 320px;
+    transition: all 0.3s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+.contant {
+    background: var(--secon-bg-color);
+    width: 100%;
+}
+
+.contant form {
+    text-align: center;
+    max-width: 50rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+
+.contant form input,
+.contant form textarea {
+    width: 100%;
+    color: rgb(70, 5, 78);
+    background: rgba(230, 229, 229, 0.5);
+    margin-bottom: .8rem;
+    border: none;
+    border-radius: 5px;
+    padding: .7rem;
+}
+
+.contant form textarea {
+    resize: none;
+}
+
+.formBtn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #ffe712cb;
+}
+
+.formBtn .btn {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* SOCIAL ICONS */
+
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
+
+
+
+/* CONTACT */
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+.card-custom-about.card-custom-image-about {
+
+    overflow: hidden;
+}
+
+.aboutimg img {
+    height: 400px;
+    width: 250px;
+    transition: all 0.3s ease;
+    border: solid var(--color-brand);
+
+}
+
+.card-custom-about:hover .card-custom-image-about img {
+    transform: scale(1.1);
+}
+
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (default) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #000;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border: solid var(--color-brand);
+  }
+  
+  /* Smaller rectangle for desktop */
+  @media (min-width: 992px) {
+    .video-responsive {
+      max-width: 45%; /* Reduce size on desktop */
+      padding-bottom: 30%; /* Adjust aspect ratio for a more compressed rectangle */
+    }
+  }
+  
+  /* Extra small rectangle for very large screens */
+  @media (min-width: 1200px) {
+    .video-responsive {
+      max-width: 30%; /* Make it even smaller on large desktops */
+      padding-bottom: 25%; /* More rectangle-like size */
+    }
+  }
+  
+/* Custom icon animation with bounce effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.2); /* Slightly larger at midpoint */
+    }
+}
+
+.icon-animate i {
+    font-size: 3rem;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
+    color: #000; /* Default color */
+}
+
+/* Trigger icon animation on hover */
+.review:hover .icon-animate i {
+    animation: bounce 0.6s ease; /* Bounce effect */
+    color: skyblue; /* Change to a different color on hover (e.g., blue) */
+}
+
+/* Entry animation for content */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
